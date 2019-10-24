@@ -1,0 +1,36 @@
+[common]
+server_addr = 47.101.64.140
+server_port = 8000
+# log_file = /tmp/frpc.log
+log_level = info
+log_max_days = 3
+token = qccz123456
+admin_addr = 127.0.0.1
+admin_port = 8001
+admin_user = qccz123456
+admin_passwd = qccz123456
+pool_count = 5
+tcp_mux = true
+# need to modify, your proxy name will be changed to {user}.{proxy}
+user = bwg
+login_fail_exit = true
+protocol = tcp
+
+[ssh]
+type = tcp
+local_ip = 127.0.0.1
+local_port = 26405
+use_encryption = true
+use_compression = true
+# need to modify, map to host port
+remote_port = 5002
+
+[web]
+type = http
+local_ip = 127.0.0.1
+local_port = 80
+use_encryption = true
+use_compression = true
+#http_user = username
+#http_pwd = password
+subdomain = bwg
